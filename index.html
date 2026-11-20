@@ -10,14 +10,14 @@
     /* Paleta y textura inspiradas en el afiche de referencia. */
     :root{--rojo:#ed3923;--rojo-oscuro:#c92b1b;--crema:#f5e7c9;--tinta:#171511;--muted:#ffe5c2;--line:rgba(34,22,12,.22);--display:Impact,"Arial Narrow",Haettenschweiler,sans-serif;--body:"Arial Narrow",Arial,sans-serif}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;color:var(--crema);font-family:var(--body);background-color:var(--rojo);background-image:radial-gradient(rgba(255,226,190,.11) .7px,transparent .8px),radial-gradient(rgba(94,14,7,.12) .7px,transparent .8px),linear-gradient(135deg,rgba(255,255,255,.025),transparent 40%,rgba(91,9,0,.05));background-size:4px 4px,7px 7px,100% 100%;min-height:100vh;overflow-x:hidden}
-    .shell{width:min(100% - 28px,940px);margin:auto}.masthead{text-align:center;padding:25px 0 18px;position:relative}.eyebrow{font:700 11px var(--body);letter-spacing:.24em;text-transform:uppercase;color:#ffe8cb}.brand{margin:1px 0 -5px;font:clamp(74px,19vw,142px)/.9 var(--display);letter-spacing:-.045em;color:var(--crema);text-shadow:2px 3px 0 rgba(92,19,9,.14);transform:scaleX(.91)}.subtitle{margin:13px 0 0;font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#ffe5c8}
+    .shell{width:min(100% - 28px,940px);margin:auto}.masthead{text-align:center;padding:20px 0 18px;position:relative}.eyebrow{font:700 11px var(--body);letter-spacing:.24em;text-transform:uppercase;color:#ffe8cb}.brand{margin:1px 0 -5px;font:clamp(74px,19vw,142px)/.9 var(--display);letter-spacing:-.045em;color:var(--crema);text-shadow:2px 3px 0 rgba(92,19,9,.14);transform:scaleX(.91)}.subtitle{margin:13px 0 0;font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#ffe5c8}
     /* Enlace del cliente: esquina superior derecha, también cómodo para tocar. */
-    .client-logo{position:absolute;right:0;top:14px;width:56px;height:44px;display:grid;place-items:center;border:1px solid rgba(245,231,201,.38);border-radius:10px;background:rgba(23,21,17,.28);transition:transform .18s ease,background .18s ease,box-shadow .18s ease}.client-logo img{display:block;width:46px;height:36px;object-fit:contain}.client-logo:hover,.client-logo:focus-visible{transform:translateY(-2px);background:rgba(23,21,17,.48);box-shadow:0 3px 12px rgba(50,10,5,.22);outline:2px solid var(--crema);outline-offset:2px}.client-logo:active{transform:scale(.96)}.client-logo-hint{position:absolute;right:0;top:62px;white-space:nowrap;color:#ffe5c8;font:600 9px var(--body);letter-spacing:.07em;text-transform:uppercase;opacity:.85}.masthead{padding-right:64px;padding-left:64px}
-    .toolbar{position:sticky;top:0;z-index:5;margin:0 -2px 22px;padding:10px 2px;background:linear-gradient(var(--rojo) 80%,rgba(237,57,35,0));backdrop-filter:blur(8px)}.nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 0 2px}.nav::-webkit-scrollbar{display:none}.nav a{flex:0 0 auto;border:1.5px solid var(--tinta);border-radius:999px;padding:8px 13px;color:var(--tinta);background:var(--crema);font:800 12px var(--display);letter-spacing:.03em;text-decoration:none;text-transform:uppercase;white-space:nowrap;box-shadow:0 2px 0 rgba(0,0,0,.08)}.nav a:hover,.nav a:focus-visible{background:#fff3db;outline:2px solid var(--tinta);outline-offset:2px}
+    .client-logo{position:relative;width:76px;height:52px;margin:0 auto 6px;display:grid;place-items:center;border:1px solid rgba(245,231,201,.38);border-radius:10px;background:rgba(23,21,17,.28);transition:transform .18s ease,background .18s ease,box-shadow .18s ease}.client-logo img{display:block;width:62px;height:44px;object-fit:contain}.client-logo:hover,.client-logo:focus-visible{transform:translateY(-2px);background:rgba(23,21,17,.48);box-shadow:0 3px 12px rgba(50,10,5,.22);outline:2px solid var(--crema);outline-offset:2px}.client-logo:active{transform:scale(.96)}.client-logo-hint{display:block;margin:0 auto 9px;color:#ffe5c8;font:600 9px var(--body);letter-spacing:.07em;text-transform:uppercase;opacity:.85}
+    .toolbar{position:sticky;top:0;z-index:5;margin:0 -2px 22px;padding:10px 2px;background:linear-gradient(var(--rojo) 80%,rgba(237,57,35,0));backdrop-filter:blur(8px)}.nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 0 2px}.nav::-webkit-scrollbar{display:none}.nav a{flex:0 0 auto;border:1.5px solid var(--tinta);border-radius:999px;padding:8px 13px;color:var(--tinta);background:var(--crema);font:800 12px var(--display);letter-spacing:.03em;text-decoration:none;text-transform:uppercase;white-space:nowrap;box-shadow:0 2px 0 rgba(0,0,0,.08)}.nav a:hover,.nav a:focus-visible,.nav a.active{background:#fff3db;outline:2px solid var(--tinta);outline-offset:2px}
     .search-wrap{margin:11px auto 0;max-width:390px;position:relative}.search{width:100%;height:39px;border:1.5px solid var(--tinta);border-radius:999px;padding:0 42px 0 15px;color:var(--tinta);background:var(--crema);font:600 14px var(--body);outline:none}.search::placeholder{color:#756550}.search:focus{box-shadow:0 0 0 3px rgba(245,231,201,.4)}.search-icon{position:absolute;right:14px;top:10px;color:var(--tinta);font-size:17px;pointer-events:none}
-    .menu-grid{display:grid;grid-template-columns:1fr;gap:24px 28px;padding-bottom:28px}.category{min-width:0;scroll-margin-top:100px}.category[hidden]{display:none}.section-title{margin:0 0 10px;border:2px solid var(--tinta);border-radius:999px;background:var(--crema);color:var(--tinta);padding:7px 12px 6px;text-align:center;font:clamp(20px,6vw,26px)/1.05 var(--display);text-transform:uppercase;letter-spacing:.015em;box-shadow:0 2px 0 rgba(0,0,0,.1)}.items{display:grid;gap:2px}.item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:4px 9px;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.item-name{font:800 clamp(15px,4.4vw,18px)/1.15 var(--display);letter-spacing:.015em;text-transform:uppercase;color:#fff0d8}.item-detail{display:block;margin-top:3px;font:600 12px/1.25 var(--body);letter-spacing:.035em;color:#ffd8b6}.price{white-space:nowrap;text-align:right;font:900 clamp(22px,7vw,32px)/1 var(--display);color:var(--crema);letter-spacing:-.025em}.variants{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;text-align:center;padding:1px 4px 3px}.variant-label{display:block;font:800 13px/1.2 var(--display);text-transform:uppercase;color:#ffebd0}.variant-price{display:block;margin-top:3px;font:900 25px/1 var(--display);color:var(--crema)}.bundle-list{list-style:none;margin:0;padding:0 9px}.bundle-list li{padding:3px 0;font:800 15px/1.15 var(--display);letter-spacing:.025em;text-transform:uppercase;color:#fff0d8}.bundle{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:0 9px}.bundle .price{font-size:42px}.empty{display:none;text-align:center;margin:25px 0;font-weight:700;color:var(--crema)}.empty.show{display:block}
+    .menu-grid{display:grid;grid-template-columns:1fr;gap:24px 28px;padding-bottom:28px}.category{min-width:0;scroll-margin-top:100px}.category[hidden]{display:none}.section-title{margin:0 0 10px;border:2px solid var(--tinta);border-radius:999px;background:var(--crema);color:var(--tinta);padding:7px 12px 6px;text-align:center;font:clamp(20px,6vw,26px)/1.05 var(--display);text-transform:uppercase;letter-spacing:.015em;box-shadow:0 2px 0 rgba(0,0,0,.1)}.items{display:grid;gap:2px}.item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:5px 9px;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.item-name{font:800 clamp(15px,4.4vw,18px)/1.15 var(--display);letter-spacing:.015em;text-transform:uppercase;color:#fff0d8;overflow-wrap:anywhere}.item-detail{display:block;margin-top:3px;font:600 12px/1.25 var(--body);letter-spacing:.035em;color:#ffd8b6;overflow-wrap:anywhere}.price{white-space:nowrap;text-align:right;font:900 clamp(22px,7vw,32px)/1 var(--display);color:var(--crema);letter-spacing:-.025em}.price.consultar{font:800 12px var(--display);letter-spacing:.04em;text-transform:uppercase}
     .footer{border-top:1px solid rgba(32,15,9,.25);padding:16px 0 25px;text-align:center;font:700 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#ffe4c5}.footer a{color:var(--crema);text-decoration:none;border-bottom:1px solid rgba(245,231,201,.55);transition:color .18s ease,border-color .18s ease}.footer a:hover,.footer a:focus-visible{color:#fff;border-color:#fff;outline:none}.footer a::after{content:' ↗';font-size:.9em}.bowling{display:block;width:min(84%,260px);margin:16px auto 0;color:var(--crema)}.bowling svg{display:block;width:100%;height:auto;filter:drop-shadow(1px 3px 0 rgba(55,17,8,.12))}
-    @media(min-width:600px){.shell{width:min(100% - 48px,900px)}.masthead{padding-top:34px;padding-bottom:22px}.client-logo{top:18px;width:68px;height:52px}.client-logo img{width:56px;height:44px}.client-logo-hint{top:70px}.toolbar{margin-bottom:25px}.nav{justify-content:center;flex-wrap:wrap;overflow:visible}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}.section-title{font-size:25px}.footer{margin-top:5px}}
+    @media(min-width:600px){.shell{width:min(100% - 48px,900px)}.masthead{padding-top:26px;padding-bottom:22px}.toolbar{margin-bottom:25px}.nav{justify-content:center;flex-wrap:wrap;overflow:visible}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}.section-title{font-size:25px}.footer{margin-top:5px}}
     @media(min-width:900px){.menu-grid{gap:32px 42px}.item-name{font-size:19px}.variant-label{font-size:14px}.variant-price{font-size:28px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
@@ -26,8 +26,8 @@
   <header class="masthead shell">
     <a class="client-logo" href="https://www.instagram.com/bowlingmaracay/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el Instagram de Bowling Maracay (se abre en una pestaña nueva)">
       <img src="./logo.png" alt="Logo de Bowling Maracay">
-      <span class="client-logo-hint" aria-hidden="true">Instagram ↗</span>
     </a>
+    <span class="client-logo-hint" aria-hidden="true">Instagram ↗</span>
     <div class="eyebrow">Comida · bebida · buena compañía</div>
     <h1 class="brand">Menú</h1>
     <p class="subtitle">Pide algo rico y sigue jugando</p>
@@ -57,39 +57,110 @@
   <footer class="footer shell">Desarrollado por <a href="https://www.instagram.com/jce.vnzl/" target="_blank" rel="noopener noreferrer">JCE Electrónicos C.A.</a> © 2026</footer>
 
   <script>
-    /* EDITA AQUÍ los nombres, descripciones y precios. El símbolo de moneda es configurable. */
+    /*
+      DATOS DEL MENÚ: cada categoría contiene sus productos.
+      Para editar: cambia nombre/detalle/precio; usa precio:null si la foto no indica un valor.
+      Las rutas de imágenes, si se agregan, deben comenzar por ./ para GitHub Pages.
+    */
     const MONEDA = '$';
     const menu = [
-      { id:'tequenos', titulo:'Tequeños & pastelitos', tipo:'variantes', opciones:[['5 unidades',7],['10 unidades',10],['20 unidades',18]] },
-      { id:'tabla-compartir', titulo:'Tabla para compartir', tipo:'paquete', precio:20, productos:['10 pastelitos surtidos','5 tequeños','6 alitas de pollo','100 g papas fritas'] },
-      { id:'tabla-chicken', titulo:'Tabla full chicken', tipo:'paquete', precio:20, productos:['18 alitas de pollo','320 g chicken popcorn','200 g papas fritas'] },
-      { id:'bebidas', titulo:'Bebidas', tipo:'lista', items:[['Agua 355 ml',1.5],['Refresco 1.5 l',3],['Refresco 2 l',4],['Malta Polar',2]] },
-      { id:'hot-dog', titulo:'Hot dog tradicional', tipo:'lista', items:[['Papas / queso / salsa',3]] },
-      { id:'hamburguesas', titulo:'Cheese burguer', tipo:'lista', items:[['Pan de batata · carne o pollo · queso cheddar · salsa spread · papas fritas',5]] },
-      { id:'alitas', titulo:'Alitas de pollo', tipo:'variantes', opciones:[['12 unidades',12],['24 unidades',20],['48 unidades',30]] },
-      { id:'servicios', titulo:'Servicios', tipo:'servicios', grupos:[{nombre:'Whisky',detalle:'Old Parr 12 años · Etiqueta Negra · Buchanan’s 12 años',precio:55},{nombre:'Ron Santa Teresa',detalle:'',precio:22}] }
+      {id:'tequenos-pastelitos',titulo:'Tequeños & pastelitos',productos:[
+        {nombre:'Tequeños de queso',detalle:'5 unidades',precio:7},{nombre:'Tequeños de queso',detalle:'10 unidades',precio:10},{nombre:'Tequeños de queso',detalle:'20 unidades',precio:18},
+        {nombre:'Pastelitos de carne molida y pollo',detalle:'5 unidades',precio:7},{nombre:'Pastelitos de carne molida y pollo',detalle:'10 unidades',precio:10},{nombre:'Pastelitos de carne molida y pollo',detalle:'20 unidades',precio:18}
+      ]},
+      {id:'entradas',titulo:'Entradas',productos:[
+        {nombre:'Parrilla mixta',detalle:'500 g de carne y pollo salteado con pimentón y cebolla, chorizo ahumado, papas fritas y ensalada César',precio:18},
+        {nombre:'Chicken popcorn',detalle:'Con papas fritas',precio:8},{nombre:'Tenders de pollo',detalle:'Con papas fritas',precio:9},
+        {nombre:'Papas fritas',detalle:'250 g · queso cheddar fundido y tocineta troceada',precio:8}
+      ]},
+      {id:'tablas',titulo:'Tablas',productos:[
+        {nombre:'Tabla para compartir',detalle:'10 pastelitos surtidos · 5 tequeños de queso · 6 alitas de pollo · 100 g de papas fritas',precio:20},
+        {nombre:'Tabla full chicken',detalle:'18 alitas de pollo · 320 g chicken popcorn · 200 g de papas fritas',precio:20}
+      ]},
+      {id:'club-house',titulo:'Club house',productos:[
+        {nombre:'Tradicional',detalle:'Pan de sándwich, carne, pollo, tomate, lechuga, queso cheddar, jamón de pierna y huevo · con papas fritas',precio:12},
+        {nombre:'Especial',detalle:'Club house tradicional + ensalada César · con papas fritas',precio:14}
+      ]},
+      {id:'hamburguesas',titulo:'Hamburguesas',productos:[
+        {nombre:'Cheese burger',detalle:'Pan de batata, carne o pollo, queso cheddar y salsa spread',precio:5},
+        {nombre:'Cosmic burger',detalle:'Pan de batata, carne, pollo o pollo crispy, tomate, pepinillo, queso cheddar y salsa spread · con papas fritas',precio:7},
+        {nombre:'Rocket burger',detalle:'Pan de batata, doble proteína (carne, pollo o pollo crispy), queso cheddar, tocineta, cebolla caramelizada, pepinillo y salsa spread · con papas fritas',precio:10}
+      ]},
+      {id:'hot-dogs',titulo:'Hot dogs',productos:[
+        {nombre:'Tradicional',detalle:'Papas, queso y salsas',precio:3},
+        {nombre:'Pepi-perro',detalle:'Pollo al grill, mermelada de tocineta, papas y salsa ranch',precio:5},
+        {nombre:'Sweet-dog',detalle:'Cebolla caramelizada, maíz, papas y salsas',precio:null},
+        {nombre:'Toci-dog',detalle:'Tocineta crujiente, cebolla caramelizada, queso cheddar fundido y lluvia de tocineta',precio:null}
+      ]},
+      {id:'pepitos',titulo:'Pepitos',productos:[
+        {nombre:'Pura papa',detalle:'Carne y pollo al grill, huevo, tocineta, papas, queso y salsas',precio:14},
+        {nombre:'Pepi-club',detalle:'Carne y pollo al grill, huevo, lechuga, tomate, papas, jamón de pierna, queso y salsas',precio:12}
+      ]},
+      {id:'ensaladas',titulo:'Ensaladas',productos:[{nombre:'César especial',detalle:'Ensalada César',precio:10}]},
+      {id:'alitas',titulo:'Alitas de pollo',productos:[
+        {nombre:'12 unidades',detalle:'Tradicional, BBQ, BBQ spicy, ajo o parmesano · con papas fritas',precio:12},
+        {nombre:'24 unidades',detalle:'Tradicional, BBQ, BBQ spicy, ajo o parmesano · con papas fritas',precio:20},
+        {nombre:'48 unidades',detalle:'Tradicional, BBQ, BBQ spicy, ajo o parmesano · con papas fritas',precio:30}
+      ]},
+      {id:'bebidas',titulo:'Bebidas',productos:[
+        {nombre:'Agua mineral',detalle:'355 ml',precio:1.5},{nombre:'Agua mineral',detalle:'600 ml',precio:2},
+        {nombre:'Refresco de lata',precio:2},{nombre:'Refresco',detalle:'1.5 l',precio:3},{nombre:'Refresco',detalle:'2 l',precio:4},
+        {nombre:'Malta Polar',precio:2},{nombre:'Lipton de durazno',precio:3},{nombre:'Lipton de limón',precio:3},
+        {nombre:'Soda de lata',precio:2},{nombre:'Soda de botella',precio:2},
+        {nombre:'Gatorade de frutas',precio:3},{nombre:'Gatorade de mandarina',precio:3},
+        {nombre:'Granizado de naranja',precio:4},{nombre:'Limonada',precio:4},{nombre:'Limonada frappé',precio:4},
+        {nombre:'Batido de parchita',precio:5},{nombre:'Batido de fresa',precio:5},{nombre:'Batido de mora',precio:5},
+        {nombre:'Smoothie de fresa',precio:5},{nombre:'Smoothie de mora',precio:5}
+      ]},
+      {id:'milkshakes',titulo:'Milkshakes',productos:[
+        {nombre:'Pequeña · 8 oz',detalle:'Mantecado, chocolate o fresa',precio:5},{nombre:'Pequeña · 8 oz',detalle:'Oreo, Pirulín, Nutella o Cocosette',precio:5},
+        {nombre:'Grande · 12 oz',detalle:'Mantecado, chocolate o fresa',precio:7},{nombre:'Grande · 12 oz',detalle:'Oreo, Pirulín, Nutella o Cocosette',precio:7}
+      ]},
+      {id:'cafe-cotufas',titulo:'Café & cotufas',productos:[
+        {nombre:'Café negro pequeño',precio:1},{nombre:'Café negro grande',precio:2},{nombre:'Café con leche pequeño',precio:2},{nombre:'Café con leche grande',precio:3},
+        {nombre:'Cotufas pequeñas',precio:1},{nombre:'Cotufas medianas',precio:2.5},{nombre:'Cotufas grandes',precio:4}
+      ]},
+      {id:'cocteles',titulo:'Cócteles',productos:[
+        {nombre:'Mojito',detalle:'Fresa, limón o parchita',precio:5},{nombre:'Cuba libre',precio:5},{nombre:'Tinto de verano',precio:5},
+        {nombre:'Destornillador',precio:5},{nombre:'Piña colada',precio:5},{nombre:'Daiquiri',detalle:'Fresa, limón o parchita',precio:5},{nombre:'Margarita',detalle:'Fresa, limón o parchita',precio:5},
+        {nombre:'Mai Tai',precio:6},{nombre:'Aperol Spritz',precio:6},{nombre:'Moscow Mule',precio:6},{nombre:'Sex on the Beach',precio:6},
+        {nombre:'Piña-parchita colada mix',precio:6},{nombre:'Digestivo Sambuca',precio:6},{nombre:'Trago de whisky con soda',precio:6},
+        {nombre:'Cometa azul · 45 oz',detalle:'Ron blanco, vodka, gin, tequila, Curazao azul, limonada y Sprite',precio:10},
+        {nombre:'Hoyo negro · 45 oz',detalle:'Ron rubio, ron blanco, Sambuca, limonada y Pepsi-Cola',precio:10}
+      ]},
+      {id:'cervezas',titulo:'Cervezas',productos:[
+        {nombre:'Zulia, Negrita o Polar Light',detalle:'1 unidad',precio:2},{nombre:'Zulia, Negrita o Polar Light',detalle:'6 unidades',precio:7},{nombre:'Zulia, Negrita o Polar Light',detalle:'12 unidades',precio:12},
+        {nombre:'Solera verde o Solera azul',detalle:'1 unidad',precio:2},{nombre:'Solera verde o Solera azul',detalle:'6 unidades',precio:8},{nombre:'Solera verde o Solera azul',detalle:'12 unidades',precio:15}
+      ]},
+      {id:'descorche',titulo:'Descorche',productos:[{nombre:'Ron',precio:10},{nombre:'Whisky',precio:20},{nombre:'Vodka',precio:15},{nombre:'Vino',precio:10}]},
+      {id:'servicios',titulo:'Servicios',productos:[
+        {nombre:'Whisky',detalle:'Old Parr 12 años · Etiqueta Negra · Buchanan’s 12 años',precio:55},{nombre:'Ron Santa Teresa',precio:22}
+      ]}
     ];
 
     const grid=document.querySelector('#menu-grid');
     const nav=document.querySelector('#category-nav');
     const money=n=>MONEDA+Number(n).toLocaleString('es-VE',{minimumFractionDigits:Number(n)%1?1:0,maximumFractionDigits:2});
+    const itemText=item=>`${item.nombre} ${item.detalle||''}`.toLocaleLowerCase('es');
     function render(){
       grid.innerHTML=menu.map(section=>{
-        let body='';
-        if(section.tipo==='variantes') body=`<div class="variants">${section.opciones.map(([label,price])=>`<div><span class="variant-label">${label}</span><span class="variant-price">${money(price)}</span></div>`).join('')}</div>`;
-        if(section.tipo==='lista') body=`<div class="items">${section.items.map(([name,price])=>`<div class="item"><span class="item-name">${name}</span><span class="price">${money(price)}</span></div>`).join('')}</div>`;
-        if(section.tipo==='paquete') body=`<div class="bundle"><ul class="bundle-list">${section.productos.map(item=>`<li>${item}</li>`).join('')}</ul><span class="price">${money(section.precio)}</span></div>`;
-        if(section.tipo==='servicios') body=`<div class="items">${section.grupos.map(group=>`<div class="item"><span class="item-name">${group.nombre}${group.detalle?`<span class="item-detail">${group.detalle}</span>`:''}</span><span class="price">${money(group.precio)}</span></div>`).join('')}</div>`;
-        return `<section class="category" id="${section.id}" data-search="${(section.titulo+' '+JSON.stringify(section)).toLocaleLowerCase('es')}"><h2 class="section-title">${section.titulo}</h2>${body}</section>`;
+        const rows=section.productos.map(product=>`<div class="item"><span class="item-name">${product.nombre}${product.detalle?`<span class="item-detail">${product.detalle}</span>`:''}</span><span class="price${product.precio==null?' consultar':''}">${product.precio==null?'Consultar':money(product.precio)}</span></div>`).join('');
+        return `<section class="category" id="${section.id}" data-search="${(section.titulo+' '+section.productos.map(itemText).join(' ')).toLocaleLowerCase('es')}"><h2 class="section-title">${section.titulo}</h2><div class="items">${rows}</div></section>`;
       }).join('');
-      nav.innerHTML=menu.map(section=>`<a href="#${section.id}">${section.titulo}</a>`).join('');
+      nav.innerHTML=`<a href="#todo" class="active" data-filter="todo">Ver todo</a>`+menu.map(section=>`<a href="#${section.id}" data-filter="${section.id}">${section.titulo}</a>`).join('');
     }
     render();
-    document.querySelector('#search').addEventListener('input',event=>{
-      const query=event.target.value.trim().toLocaleLowerCase('es');let visible=0;
-      document.querySelectorAll('.category').forEach(section=>{const show=section.dataset.search.includes(query);section.hidden=!show;if(show)visible++;});
+    const categoryCards=[...document.querySelectorAll('.category')];
+    const categoryLinks=[...document.querySelectorAll('.nav a')];
+    let selectedCategory='todo';
+    function filterMenu(){
+      const query=document.querySelector('#search').value.trim().toLocaleLowerCase('es');let visible=0;
+      categoryCards.forEach(section=>{const byCategory=selectedCategory==='todo'||section.id===selectedCategory;const bySearch=section.dataset.search.includes(query);const show=byCategory&&bySearch;section.hidden=!show;if(show)visible++;});
       document.querySelector('#empty').classList.toggle('show',visible===0);
-    });
+      categoryLinks.forEach(link=>link.classList.toggle('active',link.dataset.filter===selectedCategory));
+    }
+    nav.addEventListener('click',event=>{const link=event.target.closest('[data-filter]');if(!link)return;event.preventDefault();selectedCategory=link.dataset.filter;filterMenu();if(selectedCategory!=='todo')document.querySelector('#'+selectedCategory).scrollIntoView({behavior:'smooth',block:'start'});else window.scrollTo({top:0,behavior:'smooth'});});
+    document.querySelector('#search').addEventListener('input',filterMenu);
   </script>
 </body>
 </html>
