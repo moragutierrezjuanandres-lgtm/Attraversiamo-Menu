@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e93420">
+  <meta name="description" content="Menú digital: comida, bebidas y servicios.">
+  <title>Menú | Boliche</title>
+  <style>
+    /* Paleta y textura inspiradas en el afiche de referencia. */
+    :root{--rojo:#ed3923;--rojo-oscuro:#c92b1b;--crema:#f5e7c9;--tinta:#171511;--muted:#ffe5c2;--line:rgba(34,22,12,.22);--display:Impact,"Arial Narrow",Haettenschweiler,sans-serif;--body:"Arial Narrow",Arial,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;color:var(--crema);font-family:var(--body);background-color:var(--rojo);background-image:radial-gradient(rgba(255,226,190,.11) .7px,transparent .8px),radial-gradient(rgba(94,14,7,.12) .7px,transparent .8px),linear-gradient(135deg,rgba(255,255,255,.025),transparent 40%,rgba(91,9,0,.05));background-size:4px 4px,7px 7px,100% 100%;min-height:100vh;overflow-x:hidden}
+    .shell{width:min(100% - 28px,940px);margin:auto}.masthead{text-align:center;padding:25px 0 18px;position:relative}.eyebrow{font:700 11px var(--body);letter-spacing:.24em;text-transform:uppercase;color:#ffe8cb}.brand{margin:1px 0 -5px;font:clamp(74px,19vw,142px)/.9 var(--display);letter-spacing:-.045em;color:var(--crema);text-shadow:2px 3px 0 rgba(92,19,9,.14);transform:scaleX(.91)}.subtitle{margin:13px 0 0;font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#ffe5c8}
+    /* Enlace del cliente: esquina superior derecha, también cómodo para tocar. */
+    .client-logo{position:absolute;right:0;top:14px;width:56px;height:44px;display:grid;place-items:center;border:1px solid rgba(245,231,201,.38);border-radius:10px;background:rgba(23,21,17,.28);transition:transform .18s ease,background .18s ease,box-shadow .18s ease}.client-logo img{display:block;width:46px;height:36px;object-fit:contain}.client-logo:hover,.client-logo:focus-visible{transform:translateY(-2px);background:rgba(23,21,17,.48);box-shadow:0 3px 12px rgba(50,10,5,.22);outline:2px solid var(--crema);outline-offset:2px}.client-logo:active{transform:scale(.96)}.client-logo-hint{position:absolute;right:0;top:62px;white-space:nowrap;color:#ffe5c8;font:600 9px var(--body);letter-spacing:.07em;text-transform:uppercase;opacity:.85}.masthead{padding-right:64px;padding-left:64px}
+    .toolbar{position:sticky;top:0;z-index:5;margin:0 -2px 22px;padding:10px 2px;background:linear-gradient(var(--rojo) 80%,rgba(237,57,35,0));backdrop-filter:blur(8px)}.nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 0 2px}.nav::-webkit-scrollbar{display:none}.nav a{flex:0 0 auto;border:1.5px solid var(--tinta);border-radius:999px;padding:8px 13px;color:var(--tinta);background:var(--crema);font:800 12px var(--display);letter-spacing:.03em;text-decoration:none;text-transform:uppercase;white-space:nowrap;box-shadow:0 2px 0 rgba(0,0,0,.08)}.nav a:hover,.nav a:focus-visible{background:#fff3db;outline:2px solid var(--tinta);outline-offset:2px}
+    .search-wrap{margin:11px auto 0;max-width:390px;position:relative}.search{width:100%;height:39px;border:1.5px solid var(--tinta);border-radius:999px;padding:0 42px 0 15px;color:var(--tinta);background:var(--crema);font:600 14px var(--body);outline:none}.search::placeholder{color:#756550}.search:focus{box-shadow:0 0 0 3px rgba(245,231,201,.4)}.search-icon{position:absolute;right:14px;top:10px;color:var(--tinta);font-size:17px;pointer-events:none}
+    .menu-grid{display:grid;grid-template-columns:1fr;gap:24px 28px;padding-bottom:28px}.category{min-width:0;scroll-margin-top:100px}.category[hidden]{display:none}.section-title{margin:0 0 10px;border:2px solid var(--tinta);border-radius:999px;background:var(--crema);color:var(--tinta);padding:7px 12px 6px;text-align:center;font:clamp(20px,6vw,26px)/1.05 var(--display);text-transform:uppercase;letter-spacing:.015em;box-shadow:0 2px 0 rgba(0,0,0,.1)}.items{display:grid;gap:2px}.item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:4px 9px;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.item-name{font:800 clamp(15px,4.4vw,18px)/1.15 var(--display);letter-spacing:.015em;text-transform:uppercase;color:#fff0d8}.item-detail{display:block;margin-top:3px;font:600 12px/1.25 var(--body);letter-spacing:.035em;color:#ffd8b6}.price{white-space:nowrap;text-align:right;font:900 clamp(22px,7vw,32px)/1 var(--display);color:var(--crema);letter-spacing:-.025em}.variants{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;text-align:center;padding:1px 4px 3px}.variant-label{display:block;font:800 13px/1.2 var(--display);text-transform:uppercase;color:#ffebd0}.variant-price{display:block;margin-top:3px;font:900 25px/1 var(--display);color:var(--crema)}.bundle-list{list-style:none;margin:0;padding:0 9px}.bundle-list li{padding:3px 0;font:800 15px/1.15 var(--display);letter-spacing:.025em;text-transform:uppercase;color:#fff0d8}.bundle{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:0 9px}.bundle .price{font-size:42px}.empty{display:none;text-align:center;margin:25px 0;font-weight:700;color:var(--crema)}.empty.show{display:block}
+    .footer{border-top:1px solid rgba(32,15,9,.25);padding:16px 0 25px;text-align:center;font:700 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:#ffe4c5}.footer a{color:var(--crema);text-decoration:none;border-bottom:1px solid rgba(245,231,201,.55);transition:color .18s ease,border-color .18s ease}.footer a:hover,.footer a:focus-visible{color:#fff;border-color:#fff;outline:none}.footer a::after{content:' ↗';font-size:.9em}.bowling{display:block;width:min(84%,260px);margin:16px auto 0;color:var(--crema)}.bowling svg{display:block;width:100%;height:auto;filter:drop-shadow(1px 3px 0 rgba(55,17,8,.12))}
+    @media(min-width:600px){.shell{width:min(100% - 48px,900px)}.masthead{padding-top:34px;padding-bottom:22px}.client-logo{top:18px;width:68px;height:52px}.client-logo img{width:56px;height:44px}.client-logo-hint{top:70px}.toolbar{margin-bottom:25px}.nav{justify-content:center;flex-wrap:wrap;overflow:visible}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}.section-title{font-size:25px}.footer{margin-top:5px}}
+    @media(min-width:900px){.menu-grid{gap:32px 42px}.item-name{font-size:19px}.variant-label{font-size:14px}.variant-price{font-size:28px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="masthead shell">
+    <a class="client-logo" href="https://www.instagram.com/bowlingmaracay/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el Instagram de Bowling Maracay (se abre en una pestaña nueva)">
+      <img src="./logo.png" alt="Logo de Bowling Maracay">
+      <span class="client-logo-hint" aria-hidden="true">Instagram ↗</span>
+    </a>
+    <div class="eyebrow">Comida · bebida · buena compañía</div>
+    <h1 class="brand">Menú</h1>
+    <p class="subtitle">Pide algo rico y sigue jugando</p>
+  </header>
+
+  <div class="toolbar shell">
+    <nav class="nav" id="category-nav" aria-label="Navegación por categorías"></nav>
+    <label class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input class="search" id="search" type="search" placeholder="Buscar en el menú…" aria-label="Buscar platos y bebidas"></label>
+  </div>
+
+  <main class="shell">
+    <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+    <p class="empty" id="empty">No encontramos resultados. Prueba con otra palabra.</p>
+    <div class="bowling" aria-hidden="true">
+      <!-- Ilustración vectorial pequeña: no necesita archivos ni descargas. -->
+      <svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#171511" stroke-width="4" stroke-linejoin="round">
+          <path fill="#f5e7c9" d="M24 90 12 53Q9 43 15 39q7-4 13 6l20 30 4 18zm45-4L57 23Q55 9 64 8t12 15l8 62zm57 1 2-73q0-15 9-15t10 15l-1 73zm55 0-1-62q0-15 9-15t10 15l6 62zm38 2 17-28q6-10 13-5t1 15l-21 31z" transform="translate(0 15)"/>
+          <path fill="#171511" d="M73 82a40 35 0 1 1 80 0 40 35 0 1 1-80 0"/>
+          <circle cx="99" cy="83" r="4" fill="#f5e7c9" stroke="none"/><circle cx="117" cy="69" r="4" fill="#f5e7c9" stroke="none"/><circle cx="124" cy="91" r="4" fill="#f5e7c9" stroke="none"/>
+          <path fill="#f5e7c9" d="M104 42q4-12 10 0l7 40q4 28-12 30-15-2-12-29z"/>
+          <path fill="none" d="M60 37h13m-11 7h13m71 2h13m-13 7h14m-58-29h13m-12 7h13"/>
+        </g>
+      </svg>
+    </div>
+  </main>
+  <footer class="footer shell">Desarrollado por <a href="https://www.instagram.com/jce.vnzl/" target="_blank" rel="noopener noreferrer">JCE Electrónicos C.A.</a> © 2026</footer>
+
+  <script>
+    /* EDITA AQUÍ los nombres, descripciones y precios. El símbolo de moneda es configurable. */
+    const MONEDA = '$';
+    const menu = [
+      { id:'tequenos', titulo:'Tequeños & pastelitos', tipo:'variantes', opciones:[['5 unidades',7],['10 unidades',10],['20 unidades',18]] },
+      { id:'tabla-compartir', titulo:'Tabla para compartir', tipo:'paquete', precio:20, productos:['10 pastelitos surtidos','5 tequeños','6 alitas de pollo','100 g papas fritas'] },
+      { id:'tabla-chicken', titulo:'Tabla full chicken', tipo:'paquete', precio:20, productos:['18 alitas de pollo','320 g chicken popcorn','200 g papas fritas'] },
+      { id:'bebidas', titulo:'Bebidas', tipo:'lista', items:[['Agua 355 ml',1.5],['Refresco 1.5 l',3],['Refresco 2 l',4],['Malta Polar',2]] },
+      { id:'hot-dog', titulo:'Hot dog tradicional', tipo:'lista', items:[['Papas / queso / salsa',3]] },
+      { id:'hamburguesas', titulo:'Cheese burguer', tipo:'lista', items:[['Pan de batata · carne o pollo · queso cheddar · salsa spread · papas fritas',5]] },
+      { id:'alitas', titulo:'Alitas de pollo', tipo:'variantes', opciones:[['12 unidades',12],['24 unidades',20],['48 unidades',30]] },
+      { id:'servicios', titulo:'Servicios', tipo:'servicios', grupos:[{nombre:'Whisky',detalle:'Old Parr 12 años · Etiqueta Negra · Buchanan’s 12 años',precio:55},{nombre:'Ron Santa Teresa',detalle:'',precio:22}] }
+    ];
+
+    const grid=document.querySelector('#menu-grid');
+    const nav=document.querySelector('#category-nav');
+    const money=n=>MONEDA+Number(n).toLocaleString('es-VE',{minimumFractionDigits:Number(n)%1?1:0,maximumFractionDigits:2});
+    function render(){
+      grid.innerHTML=menu.map(section=>{
+        let body='';
+        if(section.tipo==='variantes') body=`<div class="variants">${section.opciones.map(([label,price])=>`<div><span class="variant-label">${label}</span><span class="variant-price">${money(price)}</span></div>`).join('')}</div>`;
+        if(section.tipo==='lista') body=`<div class="items">${section.items.map(([name,price])=>`<div class="item"><span class="item-name">${name}</span><span class="price">${money(price)}</span></div>`).join('')}</div>`;
+        if(section.tipo==='paquete') body=`<div class="bundle"><ul class="bundle-list">${section.productos.map(item=>`<li>${item}</li>`).join('')}</ul><span class="price">${money(section.precio)}</span></div>`;
+        if(section.tipo==='servicios') body=`<div class="items">${section.grupos.map(group=>`<div class="item"><span class="item-name">${group.nombre}${group.detalle?`<span class="item-detail">${group.detalle}</span>`:''}</span><span class="price">${money(group.precio)}</span></div>`).join('')}</div>`;
+        return `<section class="category" id="${section.id}" data-search="${(section.titulo+' '+JSON.stringify(section)).toLocaleLowerCase('es')}"><h2 class="section-title">${section.titulo}</h2>${body}</section>`;
+      }).join('');
+      nav.innerHTML=menu.map(section=>`<a href="#${section.id}">${section.titulo}</a>`).join('');
+    }
+    render();
+    document.querySelector('#search').addEventListener('input',event=>{
+      const query=event.target.value.trim().toLocaleLowerCase('es');let visible=0;
+      document.querySelectorAll('.category').forEach(section=>{const show=section.dataset.search.includes(query);section.hidden=!show;if(show)visible++;});
+      document.querySelector('#empty').classList.toggle('show',visible===0);
+    });
+  </script>
+</body>
+</html>
